@@ -1,0 +1,7 @@
+.idea
+*.log
+node_modules/
+npm-debug.*
+Thumbs.db
+bower/
+build/
