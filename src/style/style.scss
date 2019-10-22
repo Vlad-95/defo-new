@@ -19,12 +19,12 @@ body {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", 'Arial', sans-serif;
 	position: relative;
 	line-height: 1.2;
 	font-size: 18px;
 	font-weight: 400;
-	//color: $black;
+	background-color: $main-bg;
 }
 
 h1,
@@ -46,7 +46,6 @@ a {
 	&:focus {
 		text-decoration: none;
 		outline: none;
-		color: inherit;
 	}
 }
 
@@ -74,11 +73,126 @@ button {
 	}
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 .container {
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
+.container__header {
+	max-width: 1886px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
 
-@import "partials/media";
+.header {
+	&__top {
+		background: $dark;
+	}
+}
+
+//футер
+
+.footer {
+	margin-top: 200px;
+	background-color: $main-bg;
+
+	&__main,
+	&__legal {
+		border-top: 1px solid $line-gray;
+	}
+
+	&__main {
+		display: flex;
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+
+	&__list {
+		margin: 0;
+		margin-right: 80px;
+		padding: 0;
+		width: 220px;
+		list-style: none;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 29px;
+		color: $title-gray-light;
+	}
+
+	&__title {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		color: $title-gray;
+	}
+
+	&__list-special {
+		margin-top: 30px;
+		margin-bottom: 35px;
+	}
+}
+
+.payment {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__element {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.social {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__link {
+		display: block;
+		margin-right: 15px;
+	}
+}
+
+.footer__legal {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.footer__legal a {
+	font-size: 12px;
+	line-height: 18px;
+	color: #b5b6b9;
+}
