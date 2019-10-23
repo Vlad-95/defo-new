@@ -225,17 +225,62 @@
 	display: flex;
 	margin-bottom: 100px;
 
-	&__card {
+	&__column {
+		display: flex;
+		//justify-content: space-between;
+		flex-wrap: wrap;
+		margin-right: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
 		width: 361px;
+		min-height: 240px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+		background-color: $opacity-gray;
+		overflow: hidden;
+
+		&--big {
+			width: 730px;
+		}
+
+		&:last-child,
+		&:nth-child(2) {
+			margin-right: 0;
+		}
+	}
+
+	&__card {
+		display: flex;
+		width: 100%;
 	}
 
 	&__name {
 		width: 160px;
+		margin: auto;
 		font-size: 34px;
 		font-weight: 400;
 		line-height: 40px;
 		text-align: center;
 		color: $white;
+	}
+
+	&__wrapper--big &__name {
+		width: auto;
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		transform: translate(-50%, -50%);
 	}
 }
 
