@@ -238,6 +238,246 @@
 	}
 }
 
+//===============НОВИНКИ==============
+
+.new-items {
+	margin-bottom: 24px;
+}
+
+//===============ПОПУЛЯРНОЕ==============
+
+.popular-items {
+	margin-bottom: 80px;
+}
+
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
+
+.products {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__card {
+		margin-right: 7px;
+		margin-bottom: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
+
+.product {
+	width: 288px;
+	padding-left: 19px;
+	padding-top: 16px;
+	padding-right: 23px;
+	padding-bottom: 24px;
+	background-color: $white;
+
+	&--big {
+		width: 584px;
+
+		.product__image {
+			margin-top: 35px;
+		}
+
+		.simple-button {
+			bottom: -16px;
+		}
+	}
+
+	&__name {
+		margin-bottom: 8px;
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 400;
+		color: $dark;
+	}
+
+	&__score-wrap {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		margin-bottom: 12px;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__rating {
+		margin-right: 15px;
+	}
+
+	&__marks {
+		margin-bottom: 16px;
+	}
+
+	&__image {
+		width: 100%;
+		margin-bottom: 24px;
+		min-height: 244px;
+	}
+
+	&__price-info {
+		margin-bottom: 12px;
+	}
+
+	&__buyers-like {
+		margin-bottom: 15px;
+	}
+
+	&__buy {
+		position: relative;
+		margin: 0 auto;
+	}
+}
+
+//===============РЕЙТИНГ==============
+
+.rating {
+	display: flex;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		fill: $rating-default;
+
+		&--voted {
+			fill: $rating-voted;
+		}
+	}
+}
+
+.recommend {
+	position: relative;
+	padding-left: 16px;
+	font-size: 12px;
+	line-height: 14px;
+	color: $header-top-menu;
+
+	&:before {
+		content: url("../img/icons/small-people.svg");
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+
+//===============МЕТКИ==============
+
+.marks {
+	position: relative;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		display: inline-block;
+		padding: 4px 8px;
+		margin-bottom: 5px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 14px;
+		text-transform: uppercase;
+		color: $title-gray;
+		box-sizing: border-box;
+		border: 1px solid $green-border;
+		border-radius: 3px;
+		background-color: $white;
+	}
+
+	&__extra {
+		position: absolute;
+		display: none;
+		padding: 0;
+		list-style: none;
+		z-index: 2;
+	}
+}
+
+//===============ЦЕНЫ==============
+
+.prices {
+	display: flex;
+	align-items: center;
+
+	&__old {
+		position: relative;
+		margin-right: 15px;
+		font-size: 16px;
+		color: $old-price;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -1px;
+			display: block;
+			width: 65px;
+			height: 1px;
+			z-index: 2;
+			background-color: $old-price;
+			transform: rotate(-8deg);
+		}
+	}
+
+	&__new {
+		font-size: 24px;
+		color: $dark;
+	}
+
+	&__sale {
+		margin-left: 15px;
+		padding-top: 2px;
+		padding-right: 8px;
+		padding-bottom: 1px;
+		padding-left: 7px;
+		font-size: 16px;
+	}
+}
+
+//===============ПОКУПАТЕЛЯМ НРАВИТСЯ==============
+
+.buyers-like {
+	font-size: 14px;
+	line-height: 17px;
+	color: $title-gray;
+
+	.green-mark {
+		color: $green-border;
+	}
+}
+
+//===============ПРОСТАЯ КНОПКА КУПИТЬ==============
+
+.simple-button {
+	display: block;
+	width: 135px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: $opacity-gray;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid $dark;
+	box-sizing: border-box;
+
+	&:hover,
+	&:focus {
+		color: $main-bg;
+		background-color: $dark;
+	}
+}
+
 //===============категории==============
 
 .categories-preview {
