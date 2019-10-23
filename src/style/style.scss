@@ -43,6 +43,7 @@
 				padding: 7px 32px;
 				background-color: transparent;
 				display: inline-block;
+
 				&:hover {
 					background-color: $header-top-menu-bg-hover;
 					color: $header-top-menu-hover;
@@ -50,6 +51,7 @@
 			}
 		}
 	}
+
 	//ВЫБОР ГОРОДА И ТЕЛЕФОН
 	&__top-items {
 		display: flex;
@@ -62,6 +64,7 @@
 			margin-right: 40px;
 		}
 	}
+
 	//НИЖНЕЕ МЕНЮ
 	&__bottom-content {
 		display: flex;
@@ -69,6 +72,7 @@
 		align-items: center;
 		padding-left: 378px;
 	}
+
 	//МЕНЮ И ПОИСК
 	.menu-search-block {
 		display: flex;
@@ -89,6 +93,7 @@
 			display: inline-block;
 			color: $header-top-menu-bg-hover;
 		}
+
 	}
 
 	.search-form {
@@ -154,7 +159,6 @@
 //ПЕРВЫЙ ЭКРАН
 .intro {
 
-
 	&__slider {
 		width: 100%;
 	}
@@ -175,6 +179,7 @@
 		color: $header-top-menu-bg-hover;
 		background-color: $header-bg;
 		display: inline-block;
+
 		ul {
 			padding: 0;
 			margin: 0;
@@ -213,4 +218,219 @@
 	}
 }
 
-@import "partials/media";
+//категории
+
+.categories-preview {
+	display: flex;
+	margin-bottom: 100px;
+
+	&__card {
+		width: 361px;
+	}
+
+	&__name {
+		width: 160px;
+		font-size: 34px;
+		font-weight: 400;
+		line-height: 40px;
+		text-align: center;
+		color: $white;
+	}
+}
+
+//услуги
+
+.services {
+	margin: 0 auto;
+	margin-bottom: 85px;
+	max-width: 1288px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+		max-width: 165px;
+	}
+
+	&__link {
+		display: block;
+		padding-top: 65px;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		color: $dark;
+
+		&:before {
+			top: 0;
+			left: 50%;
+			content: url("../img/icons/message.svg");
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+//красный процент
+
+.percent {
+	text-align: center;
+	font-weight: 400;
+	color: $white;
+	background-color: $red;
+}
+
+//баннеры со скидкой
+
+.sales {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 55px;
+
+	&__banner {
+		position: relative;
+		width: 720px;
+	}
+
+	&__title {
+		position: absolute;
+		left: 32px;
+		bottom: 40px;
+		display: flex;
+		align-items: center;
+		padding-left: 25px;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 38px;
+		text-align: center;
+		color: $title-gray;
+		background-color: $white;
+	}
+
+	&__percent {
+		margin-left: 25px;
+		padding-top: 7px;
+		padding-bottom: 5px;
+		padding-left: 8px;
+		padding-right: 10px;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&__banner--small {
+		width: 470px;
+	}
+
+	&__banner--small &__title {
+		left: 24px;
+		bottom: 32px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	&__banner--small &__percent {
+		font-size: 20px;
+	}
+}
+
+//футер
+
+.footer {
+	margin-top: 200px;
+	background-color: $main-bg;
+
+	&__main,
+	&__legal {
+		border-top: 1px solid $line-gray;
+	}
+
+	&__main {
+		display: flex;
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+
+	&__list {
+		margin: 0;
+		margin-right: 80px;
+		padding: 0;
+		width: 220px;
+		list-style: none;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 29px;
+		color: $title-gray-light;
+	}
+
+	&__title {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		color: $title-gray;
+	}
+
+	&__list-special {
+		margin-top: 30px;
+		margin-bottom: 35px;
+	}
+
+	.footer__legal {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.footer__legal a {
+		font-size: 12px;
+		line-height: 18px;
+		color: #b5b6b9;
+	}
+}
+
+.payment {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__element {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.social {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__link {
+		display: block;
+		margin-right: 15px;
+	}
+
+	.inst-desc {
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		color: #999ba2;
+	}
+}

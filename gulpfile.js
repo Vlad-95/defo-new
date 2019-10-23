@@ -86,9 +86,7 @@ gulp.task('style:build', function () {
 		.pipe(rename(function (path) {
 			path.basename += "-min";
 		}))
-		.pipe(cssMin({
-			inline: ['none']
-		}))
+		.pipe(cssMin())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream: true}));
 });

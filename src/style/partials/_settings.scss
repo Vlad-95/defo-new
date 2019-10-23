@@ -3,6 +3,10 @@ $red: #d33234;
 $white: #ffffff;
 $black: #000000;
 $dark: #292e3c;
+$main-bg: #e5e5e5;
+$line-gray: #c7c8c8;
+$title-gray: #545863;
+$title-gray-light: #6d707a;
 $header-bg: #f6f6f6;
 $header-top-menu: #b5b6b9;
 $header-top-menu-hover: #e5e5e6;
@@ -21,6 +25,21 @@ $header-search-dark-gray: #c7c8cb;
 	}
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type = "checkbox"].visually-hidden,
+input[type = "radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 html,
 body {
 	margin: 0;
@@ -28,12 +47,12 @@ body {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", "Arial", sans-serif;
 	position: relative;
 	line-height: 1.2;
 	font-size: 18px;
 	font-weight: 400;
-	//color: $black;
+	background-color: $main-bg;
 }
 
 h1,
@@ -55,7 +74,6 @@ a {
 	&:focus {
 		text-decoration: none;
 		outline: none;
-		color: inherit;
 	}
 }
 
