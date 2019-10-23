@@ -407,6 +407,74 @@
 	}
 }
 
+//=========СТАТЬИ============
+.states {
+	margin-bottom: 57px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex-basis: 15%;
+		background-color: $white;
+
+	}
+
+	&__image {
+		height: 140px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		padding: 12px 20px;
+	}
+
+	&__date {
+		font-size: 12px;
+		line-height: 18px;
+		color: $news-date;
+		margin-bottom: 8px;
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 24px;
+		color: $dark;
+		font-weight: 400;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 21px;
+		color: $states-text;
+		margin-top: 16px;
+	}
+}
+
+//============ИНСТАГРАМ==========
+.instagram {
+	margin-bottom: 57px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		flex-basis: 30%;
+		background-color: $header-top-menu-hover;
+		height: 400px;
+	}
+}
+
 //=============футер=========
 
 .footer {
