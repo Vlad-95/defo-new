@@ -109,6 +109,128 @@ input[type="radio"].visually-hidden {
 	}
 }
 
+//категории
+
+.categories-preview {
+	display: flex;
+	margin-bottom: 100px;
+
+	&__card {
+		width: 361px;
+	}
+
+	&__name {
+		width: 160px;
+		font-size: 34px;
+		font-weight: 400;
+		line-height: 40px;
+		text-align: center;
+		color: $white;
+	}
+}
+
+//услуги
+
+.services {
+	margin: 0 auto;
+	margin-bottom: 85px;
+	max-width: 1288px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+		max-width: 165px;
+	}
+
+	&__link {
+		display: block;
+		padding-top: 65px;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		color: $dark;
+
+		&:before {
+			top: 0;
+			left: 50%;
+			content: url("../img/icons/message.svg");
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+//красный процент
+
+.percent {
+	text-align: center;
+	font-weight: 400;
+	color: $white;
+	background-color: $red;
+}
+
+//баннеры со скидкой
+
+.sales {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 55px;
+
+	&__banner {
+		position: relative;
+		width: 720px;
+	}
+
+	&__title {
+		position: absolute;
+		left: 32px;
+		bottom: 40px;
+		display: flex;
+		align-items: center;
+		padding-left: 25px;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 38px;
+		text-align: center;
+		color: $title-gray;
+		background-color: $white;
+	}
+
+	&__percent {
+		margin-left: 25px;
+		padding-top: 7px;
+		padding-bottom: 5px;
+		padding-left: 8px;
+		padding-right: 10px;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&__banner--small {
+		width: 470px;
+	}
+
+	&__banner--small &__title {
+		left: 24px;
+		bottom: 32px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	&__banner--small &__percent {
+		font-size: 20px;
+	}
+}
+
 //футер
 
 .footer {
@@ -183,6 +305,13 @@ input[type="radio"].visually-hidden {
 	&__link {
 		display: block;
 		margin-right: 15px;
+	}
+
+	.inst-desc {
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		color: #999ba2;
 	}
 }
 
