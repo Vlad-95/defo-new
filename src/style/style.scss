@@ -7,7 +7,7 @@
 	}
 
 	&__bottom {
-		background-color: $header-bg;
+		background-color: $main-bg;
 	}
 
 	&__top-content {
@@ -155,7 +155,7 @@
 		}
 	}
 }
-//ПЕРВЫЙ ЭКРАН
+//==============ПЕРВЫЙ ЭКРАН===============
 .intro {
 	max-width: 1920px;
 	margin: 0 auto;
@@ -178,7 +178,7 @@
 		font-size: 16px;
 		line-height: 19px;
 		color: $header-top-menu-bg-hover;
-		background-color: $header-bg;
+		background-color: $main-bg;
 		display: inline-block;
 
 		ul {
@@ -192,7 +192,7 @@
 			position: relative;
 
 			&:after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -218,8 +218,27 @@
 		}
 	}
 }
+//===========Кнопки под первым блоком=============
+.product-kind-btns {
+	padding: 32px 0 18px;
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+	}
 
-//категории
+	&__item {
+		font-size: 16px;
+		line-height: 19px;
+		color: $dark;
+		border: 1px solid $header-top-menu-hover;
+		padding: 11px 24px;
+		margin: 2px;
+	}
+}
+
+//===============категории==============
 
 .categories-preview {
 	display: flex;
@@ -239,7 +258,7 @@
 	}
 }
 
-//услуги
+//================услуги================
 
 .services {
 	margin: 0 auto;
