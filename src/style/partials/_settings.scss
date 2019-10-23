@@ -2,6 +2,95 @@
 $red: #d33234;
 $white: #ffffff;
 $black: #000000;
-$grey: #f6f6f6;
-$green: #006400;
-$blue: #2c69bd;
+$dark: #292e3c;
+$header-bg: #f6f6f6;
+$header-top-menu: #b5b6b9;
+$header-top-menu-hover: #e5e5e6;
+$header-top-menu-bg-hover: #545863;
+$header-search-dark-gray: #c7c8cb;
+//===========DEFAULT STYLES========
+
+// Main
+
+* {
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	margin: 0;
+	width: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 400;
+	//color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.2s;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		outline: none;
+		color: inherit;
+	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+}
+
+input,
+textarea,
+button {
+	outline: none;
+	-webkit-appearance: none;
+	resize: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container__header {
+	max-width: 1886px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
