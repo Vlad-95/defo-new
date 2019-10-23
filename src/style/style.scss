@@ -45,7 +45,7 @@
 				display: inline-block;
 
 				&:hover {
-					background-color: $header-top-menu-bg-hover;
+					background-color: $title-gray;
 					color: $header-top-menu-hover;
 				}
 			}
@@ -91,7 +91,7 @@
 			font-size: 16px;
 			line-height: 19px;
 			display: inline-block;
-			color: $header-top-menu-bg-hover;
+			color: $title-gray;
 		}
 
 	}
@@ -123,7 +123,7 @@
 				font-size: 14px;
 				line-height: 16px;
 				text-transform: uppercase;
-				color: $header-top-menu-bg-hover;
+				color: $title-gray;
 			}
 		}
 
@@ -177,7 +177,7 @@
 		width: 307px;
 		font-size: 16px;
 		line-height: 19px;
-		color: $header-top-menu-bg-hover;
+		color: $title-gray;
 		background-color: $main-bg;
 		display: inline-block;
 
@@ -477,6 +477,122 @@
 		padding: 9px 15px;
 		display: inline-block;
 		border: 1px solid $header-top-menu-hover;
+	}
+}
+
+//=========СТАТЬИ============
+.states {
+	margin-bottom: 57px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex-basis: 15%;
+		background-color: $white;
+
+	}
+
+	&__image {
+		height: 140px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		padding: 12px 20px;
+	}
+
+	&__date {
+		font-size: 12px;
+		line-height: 18px;
+		color: $news-date;
+		margin-bottom: 8px;
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 24px;
+		color: $dark;
+		font-weight: 400;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 21px;
+		color: $states-text;
+		margin-top: 16px;
+	}
+}
+
+//============ИНСТАГРАМ==========
+.instagram {
+	margin-bottom: 57px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		flex-basis: 30%;
+		background-color: $header-top-menu-hover;
+		height: 400px;
+	}
+}
+
+//==========ОТЗЫВЫ============
+.reviews {
+	margin-bottom: 80px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex-basis: 50%;
+		padding-right: 140px;
+	}
+
+	&__top {
+		display: flex;
+		margin-bottom: 16px;
+	}
+
+	.user-pic {
+		width: 40px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: $title-gray;
+		margin-right: 16px;
+	}
+
+	.user-name {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		color: $dark;
+	}
+
+	&__date {
+		font-size: 12px;
+		line-height: 18px;
+		color: $news-date;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 21px;
+		color: $title-gray;
 	}
 }
 
