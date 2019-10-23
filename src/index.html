@@ -144,7 +144,15 @@
 
 			<nav class="product-menu">
 				<ul>
-					<li><a href="javasctipt:;">Коллекции</a></li>
+					<li>
+						<a href="javasctipt:;">Коллекции</a>
+						<ul class="dropdown-menu">
+							<li><a href="javascript">Какой-то элемент</a></li>
+							<li><a href="javascript">Какой-то элемент</a></li>
+							<li><a href="javascript">Какой-то элемент</a></li>
+							<li><a href="javascript">Какой-то элемент</a></li>
+						</ul>
+					</li>
 					<li><a href="javasctipt:;">Мебель для персонала</a></li>
 					<li><a href="javasctipt:;">Президент кабинеты</a></li>
 					<li><a href="javasctipt:;">Кабинет руководителя</a></li>
@@ -1384,6 +1392,69 @@
 				</li>
 			</ul>
 		</section>
+		<section class="map">
+			<h2 class="block-title">Поиск ближайшего салона</h2>
+			<form action="" class="map__search">
+				<input class="map__search-input" type="text" placeholder="Укажите адрес или станцию метро">
+				<button type="submit" class="map__search-submit">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#545863" stroke-width="2" stroke-miterlimit="10"/>
+						<path d="M14.9 15.1001L22.9 23.0001" stroke="#545863" stroke-width="2" stroke-miterlimit="10"/>
+					</svg>
+				</button>
+			</form>
+			<div class="map__wrapper">
+				<div class="map__left">
+					<ul class="map__list">
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+						<li class="map__item">
+							<div class="item-name">Новолитовская ул., д.15-А, корп. Д</div>
+							<div class="item-info">
+								<p>Lorem ipsum dolor sit amet.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="map__right" id="map">
+
+				</div>
+			</div>
+		</section>
 		<section class="news">
 			<h2 class="block-title">
 				Новости
@@ -1774,6 +1845,7 @@
 
 
 <script src="js/jquery.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 <script src="js/libs.js"></script>
 <script src="js/common.js"></script>
 </body>
