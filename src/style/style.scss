@@ -62,6 +62,7 @@
 
 		.city-choose {
 			margin-right: 40px;
+			display: flex;
 		}
 	}
 
@@ -210,12 +211,33 @@
 			&:nth-last-of-type(1) {
 				border: none;
 			}
+
+			.dropdown-menu {
+				display: none;
+				position: absolute;
+				left: 100%;
+				top: 0;
+				width: 100%;
+				background-color: $main-bg;
+
+				li {
+					border: none;
+					&:after {
+						display: none;
+					}
+				}
+			}
+
+			&:hover .dropdown-menu {
+				display: block;
+			}
 		}
 
 		a {
 			padding: 15px 24px;
 			display: block;
 		}
+
 	}
 }
 //===========Кнопки под первым блоком=============
