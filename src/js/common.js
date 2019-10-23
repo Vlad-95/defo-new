@@ -3,4 +3,7 @@ $(document).ready(function () {
 		arrows: false,
 		dots: false
 	});
+
+	//одинаковая высота новостей
+	$('.news__text').matchHeight();
 });
