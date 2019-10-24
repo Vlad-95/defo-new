@@ -66,6 +66,14 @@ $(document).ready(function () {
 		autoplaySpeed: 2000,
 		responsive: [
 			{
+				breakpoint: 320,
+				settings: {
+					slidesToShow: 2,
+					centerPadding: '60px',
+					centerMode: true
+				}
+			},
+			{
 				breakpoint: 576,
 				settings: {
 					slidesToShow: 3

@@ -1000,13 +1000,40 @@
 		border-bottom: none;
 
 		&:before {
-			top: 18px;
+			top: 0;
 			left: 50%;
-			content: url("../img/icons/message.svg");
 			position: absolute;
-			width: 40px;
-			height: 40px;
 			transform: translateX(-50%);
+		}
+
+		&--test-drive {
+			&:before {
+				content: url("../img/icons/test-drive.svg");
+			}
+		}
+
+		&--project {
+			&:before {
+				content: url("../img/icons/project.svg");
+			}
+		}
+
+		&--specialist {
+			&:before {
+				content: url("../img/icons/specialist-to-office.svg");
+			}
+		}
+
+		&--expert {
+			&:before {
+				content: url("../img/icons/expert-consultation.svg");
+			}
+		}
+
+		&--documents {
+			&:before {
+				content: url("../img/icons/documents.svg");
+			}
 		}
 	}
 
@@ -1430,13 +1457,13 @@
 		font-weight: 400;
 		line-height: 29px;
 		color: $title-gray-light;
-	}
 
-	&__title {
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
-		color: $title-gray;
+		&--title {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 20px;
+			color: $title-gray;
+		}
 	}
 
 	&__list-special {
