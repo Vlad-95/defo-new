@@ -347,3 +347,94 @@
 @media (max-width: 576px) {
 
 }
+
+//дана
+
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
+
+@media(max-width: 1280px) {
+	.product {
+		width: 240px;
+
+		&--big {
+			width: 495px;
+		}
+
+		&__fast-view {
+			font-size: 13px;
+		}
+
+		&__preview-item {
+			width: 45px;
+			margin-right: 2px;
+		}
+
+		&__amount {
+			margin-right: 10px;
+		}
+
+		&__colors {
+			flex-direction: column;
+		}
+
+		&__change-amount {
+			width: 96px;
+		}
+
+		&__buyers-like {
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+}
+
+//===============ЦЕНЫ==============
+
+@media(max-width: 1280px) {
+	.prices {
+
+		&__old {
+			font-size: 12px;
+
+			&:before {
+				width: 55px;
+			}
+		}
+
+		&__new {
+			font-size: 16px;
+		}
+
+		&__sale {
+			font-size: 14px;
+		}
+	}
+}
+
+//===============КАТЕГОРИИ==============
+
+@media(max-width: 1280px) {
+	.categories-preview {
+
+		&__wrapper {
+			width: 411px;
+
+			&--big {
+				width: 831px;
+			}
+
+			&:first-child,
+			&:nth-child(3) {
+				margin-right: 0;
+			}
+
+			&:nth-child(2) {
+				margin-right: inherit;
+			}
+		}
+	}
+}
+
+@media(max-width: 768px){
+	
+}
