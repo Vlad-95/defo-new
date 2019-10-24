@@ -145,6 +145,11 @@
 			width: 70px;
 			background-color: $red;
 		}
+
+		use {
+			stroke: $white;
+		}
+
 	}
 	//ИКОНКИ КОРЗИНЫ И ЛК
 	&__bottom-items {
@@ -732,6 +737,10 @@
 		margin: auto;
 		background-color: transparent;
 		border: none;
+
+		use {
+			stroke: $title-gray;
+		}
 	}
 
 	&__wrapper {
@@ -1046,3 +1055,5 @@
 		color: #999ba2;
 	}
 }
+
+@import "partials/media";
