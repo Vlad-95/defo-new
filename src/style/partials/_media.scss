@@ -435,6 +435,176 @@
 	}
 }
 
+//===============ФУТЕР==============
+
+@media(max-width: 1280px){
+	.footer {
+		&__list {
+			width: 210px;
+			margin-right: 40px;
+		}
+	}
+}
+
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
+
+@media(max-width: 768px) {
+	.products {
+
+		&__list {
+			justify-content: flex-start;
+		}
+
+		&__card {
+			margin-right: 7px;
+			margin-bottom: 25px;
+
+			&:last-child,
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
+
+@media(max-width: 768px) {
+	.product {
+		order: 1;
+		&--big {
+			order: 2;
+			width: 100%;
+		}
+		//
+		//&__fast-view {
+		//	font-size: 13px;
+		//}
+		//
+		//&__preview-item {
+		//	width: 45px;
+		//	margin-right: 2px;
+		//}
+		//
+		//&__amount {
+		//	margin-right: 10px;
+		//}
+		//
+		//&__colors {
+		//	flex-direction: column;
+		//}
+		//
+		//&__change-amount {
+		//	width: 96px;
+		//}
+		//
+		//&__buyers-like {
+		//	font-size: 12px;
+		//	line-height: 14px;
+		//}
+	}
+}
+
+//===============КАТЕГОРИИ==============
+
+@media(max-width: 768px) {
+	.categories-preview {
+		flex-wrap: wrap;
+		margin-bottom: 45px;
+
+		&__column {
+			margin-right: 0;
+			width: 100%;
+
+			&:last-child .categories-preview__wrapper {
+				width: 100%;
+			}
+		}
+
+		&__wrapper {
+			width: 365px;
+
+			&--big {
+				width: 100%;
+			}
+
+
+			&:first-child,
+			&:nth-child(3),
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+
+			&:nth-child(2) {
+				margin-right: 8px;
+			}
+		}
+	}
+}
+
+//===============УСЛУГИ==============
+
+@media(max-width: 768px) {
+	.services {
+		margin-bottom: 60px;
+
+		&__list {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+//===============ФУТЕР==============
+
 @media(max-width: 768px){
-	
+	.footer {
+		margin-top: 100px;
+
+		&__main {
+			padding-bottom: 10px;
+		}
+
+		&__list {
+			width: 200px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+//===============СКИДКИ==============
+
+@media(max-width: 768px){
+	.sales {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&__banner {
+			width: 360px;
+			margin-right: 15px;
+			margin-bottom: 15px;
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+
+		&__title {
+			left: 15px;
+			bottom: 15px;
+			font-size: 25px;
+			line-height: 28px;
+		}
+
+		&__percent {
+			font-size: 18px;
+		}
+	}
+}
+
+//===============ПАРТНЕРЫ==============
+
+@media(max-width: 768px){
+	.partners {
+		margin-bottom: 25px;
+	}
 }
