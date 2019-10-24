@@ -4,6 +4,18 @@ $(document).ready(function () {
 		dots: false
 	});
 
+
+	//ширина раскрывающегося меню
+	var dropdown = $('.dropdown-menu');
+	var menuWidth = $('.product-menu').innerWidth;
+	$(window).resize(function () {
+		var dropdownWidth = window.innerWidth - menuWidth - 15;
+		dropdown.css('width', function () {
+			return (window.innerWidth - menuWidth - 15);
+		});
+		console.log(window.innerWidth);
+	});
+
 	// слайдер кнопок под первым экраном
 	$('.product-kind-btns__wrapper').slick({
 		mobileFirst: true,

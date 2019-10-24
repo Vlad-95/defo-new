@@ -168,6 +168,10 @@
 			display: inline-block;
 			color: $title-gray;
 			white-space: nowrap;
+
+			&:hover {
+				color: $states-text;
+			}
 		}
 	}
 
@@ -185,6 +189,7 @@
 		border: none;
 		width: 100%;
 		height: 44px;
+		padding: 0 75px 0 160px;
 	}
 
 	.search-filter {
@@ -245,6 +250,15 @@
 
 	&__slider {
 		width: 100%;
+		height: 665px;
+	}
+
+	&__slider-item {
+		img {
+			height: 100%;
+			width: auto;
+			max-width: none;
+		}
 	}
 
 	&__content {
@@ -299,7 +313,7 @@
 				position: absolute;
 				left: 100%;
 				top: 0;
-				width: 100%;
+				width: 500px;
 				background-color: $main-bg;
 
 				li {

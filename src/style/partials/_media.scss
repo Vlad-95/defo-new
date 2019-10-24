@@ -92,6 +92,11 @@
 				margin: 0;
 			}
 		}
+
+		.search-input {
+			padding: 0 60px 0 10px;
+		}
+
 		.search-filter {
 			display: none;
 		}
@@ -133,6 +138,17 @@
 
 	//==============ПЕРВЫЙ ЭКРАН===============
 	.intro {
+		&__slider {
+			width: 100%;
+			height: auto;
+		}
+
+		&__slider-item {
+			img {
+				height: auto;
+				max-width: 100%;
+			}
+		}
 		.product-menu {
 			display: none;
 		}
