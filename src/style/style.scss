@@ -358,6 +358,7 @@
 
 .products {
 	&__list {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -379,22 +380,57 @@
 //===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
 
 .product {
+	position: relative;
 	width: 288px;
-	padding-left: 19px;
-	padding-top: 16px;
-	padding-right: 23px;
-	padding-bottom: 24px;
-	background-color: $white;
+	height: 561px;
+	z-index: 1;
+
+	&__main-wrap {
+		padding-left: 19px;
+		padding-top: 16px;
+		padding-right: 23px;
+		padding-bottom: 24px;
+		background-color: $white;
+		box-sizing: border-box;
+		border: 1px solid transparent;
+		z-index: 1;
+	}
+
+	&:hover {
+		z-index: 2;
+	}
+
+	&:hover &__main-wrap {
+		//position: absolute;
+		border: 1px solid $title-gray;
+		box-shadow: 8px 8px 50px $product-shadow;
+		z-index: 2;
+		//transform: scale(1.5);
+	}
+
+	&__main-wrap {
+		display: block;
+		z-index: 1;
+	}
+
+	&__main-image {
+		position: relative;
+		min-height: 244px;
+
+		img {
+			width: 100%;
+		}
+	}
 
 	&--big {
 		width: 584px;
 
-		.product__image {
+		.product__main-image {
 			margin-top: 35px;
 		}
 
-		.simple-button {
-			bottom: -16px;
+		.product__price-info {
+			margin-top: 0;
 		}
 	}
 
@@ -423,6 +459,16 @@
 		margin-bottom: 16px;
 	}
 
+	&__gallery {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	//временно для большой карточки!!!
+
 	&__image {
 		width: 100%;
 		margin-bottom: 24px;
@@ -430,17 +476,272 @@
 	}
 
 	&__price-info {
-		margin-bottom: 12px;
+		margin-top: 24px;
+		margin-bottom: 8px;
 	}
 
 	&__buyers-like {
+		margin-top: 8px;
 		margin-bottom: 15px;
 	}
 
 	&__buy {
 		position: relative;
-		margin: 0 auto;
+		//margin: 0 auto;
 	}
+
+	//ховерные блоки
+
+	&__basket {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&:hover &__basket {
+		display: flex;
+	}
+
+	&__fast-view {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover &__fast-view {
+		display: block;
+	}
+
+	&__preview-list {
+		display: none;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__preview-item {
+		width: 55px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+		box-sizing: border-box;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&:hover &__preview-list {
+		display: flex;
+	}
+
+	&__cheaper {
+		display: none;
+	}
+
+	&:hover &__cheaper {
+		display: block;
+	}
+
+	&__info {
+		display: none;
+		margin-bottom: 20px;
+	}
+
+	&:hover &__info {
+		display: block;
+	}
+
+	&__amount {
+		margin-right: 16px;
+	}
+
+	&__colors {
+		display: none;
+		align-items: center;
+		margin-bottom: 19px;
+	}
+
+	&__another-color {
+		margin-left: 16px;
+	}
+
+	&:hover &__colors {
+		display: flex;
+	}
+
+	&__buy-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__change-amount-wrap {
+		display: none;
+		margin-right: 16px;
+	}
+
+	&:hover &__change-amount-wrap {
+		display: block;
+	}
+
+	&__total-price {
+		display: none;
+		margin-top: 18px;
+		font-size: 14px;
+		font-weight: 400;
+		color: $header-top-menu;
+
+		span {
+			font-size: 16px;
+			color: $dark;
+		}
+	}
+
+	&:hover &__total-price {
+		display: block;
+	}
+}
+
+//===============ИЗМЕНИТЬ КОЛИЧЕСТВО==============
+
+.change-amount {
+	display: flex;
+	justify-content: space-between;
+	width: 104px;
+	background-color: $main-bg;
+	box-sizing: border-box;
+
+	&__regulator {
+		position: relative;
+		padding: 0 16px;
+		font-size: 0;
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			background-color: $title-gray;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:before {
+			height: 2px;
+			width: 12px;
+		}
+
+		&--plus:after {
+			height: 12px;
+			width: 2px;
+		}
+	}
+
+	&__text {
+		padding-top: 17px;
+		padding-bottom: 15px;
+		width: 32px;
+		font-size: 14px;
+		font-weight: 500;
+		text-align: center;
+		color: $title-gray;
+		border: none;
+		background-color: $main-bg;
+	}
+}
+
+//===============ЦВЕТА==============
+
+.colors {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		padding: 0;
+		width: 24px;
+		height: 24px;
+		border: none;
+		background-color: transparent;
+	}
+
+	li {
+		margin-right: 8px;
+	}
+
+	li:last-child {
+		margin-right: 0;
+	}
+}
+
+//===============КОЛИЧЕСТВО==============
+
+.amount {
+	position: relative;
+	padding-left: 22px;
+	font-size: 14px;
+	line-height: 17px;
+	color: $title-gray;
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&--much:before {
+		content: url("../img/icons/much.svg");
+	}
+}
+
+//===============ВЫЗОВ ФОРМЫ==============
+
+.call-form {
+	padding: 0;
+	font-size: 14px;
+	line-height: 17px;
+	color: $header-top-menu;
+	border: none;
+	background-color: transparent;
+}
+
+//===============АРТИКУЛ==============
+
+.vendor-code {
+	font-size: 14px;
+	line-height: 17px;
+	color: $header-top-menu;
+}
+
+//===============БЫСТРЫЙ ПРОСМОТР==============
+
+.fast-view {
+	padding-top: 18px;
+	padding-right: 25px;
+	padding-bottom: 14px;
+	padding-left: 25px;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	color: $title-gray;
+	text-transform: uppercase;
+	background-color: $opacity-white;
+	border: 1px solid $header-top-menu-hover;
+	box-sizing: border-box;
 }
 
 //===============РЕЙТИНГ==============
@@ -573,6 +874,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	border: 1px solid $dark;
+	background-color: $white;
 	box-sizing: border-box;
 
 	&:hover,
