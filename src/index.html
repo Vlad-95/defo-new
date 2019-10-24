@@ -9,14 +9,129 @@
 	<title>Дэфо</title>
 </head>
 <body>
+
 <header class="header">
-	<div class="header__top">
-		<div class="container__header">
-			<div class="header__top-content">
-				<a href="javascript:;" class="logo">
-					<img src="img/logo.jpg" alt="">
-				</a>
-				<nav class="header__top-menu">
+	<div class="header__desktop">
+		<div class="header__top">
+			<div class="container__header">
+				<div class="header__top-content">
+					<a href="javascript:;" class="logo logo--desktop">
+						<img src="img/logo.jpg" alt="">
+					</a>
+					<nav class="header__top-menu">
+						<ul>
+							<li><a href="javascript:;">Интернет магазин</a></li>
+							<li><a href="javascript:;">ДЭФО Бизнес</a></li>
+							<li><a href="javascript:;">Госзаказчикам</a></li>
+							<li><a href="javascript:;">ДЭФО дисконт</a></li>
+							<li><a href="javascript:;">Дизайнерам и архитекторам</a></li>
+						</ul>
+					</nav>
+					<div class="header__top-items">
+						<div class="city-choose">
+							<span>Санкт-Петербург</span>
+							<div class="arrow">
+								<svg width="10" height="6">
+									<use xlink:href="img/icons/sprite.svg#city-choose-arrow"></use>
+								</svg>
+							</div>
+						</div>
+						<a href="javascript" class="phone">+ 8 (800) 770 01 20</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<div class="container__header">
+				<div class="header__bottom-content">
+					<div class="menu-search-block">
+						<nav class="header__bottom-menu">
+							<ul>
+								<li><a href="javascript:;">Магазины</a></li>
+								<li><a href="javascript:;">О компании</a></li>
+								<li><a href="javascript:;">Услуги</a></li>
+								<li><a href="javascript:;">Акции</a></li>
+								<li><a href="javascript:;">Доставка и сборка</a></li>
+								<li><a href="javascript:;">Поддержка</a></li>
+							</ul>
+						</nav>
+						<div class="header__bottom-search">
+							<form action="" class="search-form">
+								<div class="search-input-div">
+									<input type="text" class="search-input">
+								</div>
+								<div class="search-filter">
+									<div class="filter-chooser">
+										<span>По алфавиту</span>
+										<span class="arrow">
+											<svg width="11" height="7">
+												<use xlink:href="img/icons/sprite.svg#small-arrow-down"></use>
+											</svg>
+
+										</span>
+									</div>
+									<div class="filter-dropdown">
+										<span>По популярности</span>
+										<span>По релевантности</span>
+									</div>
+								</div>
+								<div class="search-button-div">
+									<button type="submit">
+										<svg width="24" height="25">
+											<use xlink:href="img/icons/sprite.svg#search-submit"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="header__bottom-items">
+						<div class="item">
+							<a href="javascript:;" class="basket-link delay">
+								<svg width="20" height="18">
+									<use xlink:href="img/icons/sprite.svg#basket-delay"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="item">
+							<a href="javascript:;" class="basket-link compare">
+								<svg width="14" height="16">
+									<use xlink:href="img/icons/sprite.svg#basket-compare"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="item">
+							<a href="javascript:;" class="cabinet-link">
+								<svg width="18" height="19">
+									<use xlink:href="img/icons/sprite.svg#user"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="item">
+							<a href="javascript:;" class="basket-link basket">
+								<svg width="21" height="17">
+									<use xlink:href="img/icons/sprite.svg#basket"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__mobile">
+		<a href="javascript:;" class="logo logo--mobile">
+			<img src="img/logo-mobile.jpg" alt="">
+		</a>
+		<div class="header__mobile-row">
+			<div class="segments-select">
+				<div class="segments-current">
+					<p>Интернет магазин</p>
+					<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 1L5 5L1 1" stroke="white"/>
+					</svg>
+				</div>
+				<div class="segments-other">
 					<ul>
 						<li><a href="javascript:;">Интернет магазин</a></li>
 						<li><a href="javascript:;">ДЭФО Бизнес</a></li>
@@ -24,94 +139,22 @@
 						<li><a href="javascript:;">ДЭФО дисконт</a></li>
 						<li><a href="javascript:;">Дизайнерам и архитекторам</a></li>
 					</ul>
-				</nav>
-				<div class="header__top-items">
-					<div class="city-choose">
-						<span>Санкт-Петербург</span>
-						<div class="arrow">
-							<svg width="10" height="6">
-								<use xlink:href="img/icons/sprite.svg#city-choose-arrow"></use>
-							</svg>
-						</div>
-					</div>
-					<a href="javascript" class="phone">+ 8 (800) 770 01 20</a>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="header__bottom">
-		<div class="container__header">
-			<div class="header__bottom-content">
-				<div class="menu-search-block">
-					<nav class="header__bottom-menu">
-						<ul>
-							<li><a href="javascript:;">Магазины</a></li>
-							<li><a href="javascript:;">О компании</a></li>
-							<li><a href="javascript:;">Услуги</a></li>
-							<li><a href="javascript:;">Акции</a></li>
-							<li><a href="javascript:;">Доставка и сборка</a></li>
-							<li><a href="javascript:;">Поддержка</a></li>
-						</ul>
-					</nav>
-					<div class="header__bottom-search">
-						<form action="" class="search-form">
-							<div class="search-input-div">
-								<input type="text" class="search-input">
-							</div>
-							<div class="search-filter">
-								<div class="filter-chooser">
-									<span>По алфавиту</span>
-									<span class="arrow">
-										<svg width="11" height="7">
-											<use xlink:href="img/icons/sprite.svg#small-arrow-down"></use>
-										</svg>
-									</span>
-								</div>
-								<div class="filter-dropdown">
-									<span>По популярности</span>
-									<span>По релевантности</span>
-								</div>
-							</div>
-							<div class="search-button-div">
-								<button type="submit">
-									<svg width="24" height="25">
-										<use xlink:href="img/icons/sprite.svg#search-submit"></use>
-									</svg>
-								</button>
-							</div>
-						</form>
-					</div>
+			<div class="header__mobile-right">
+				<div class="header__mobile-search">
+					<span class="search-icon">
+						<svg width="24" height="25">
+							<use xlink:href="img/icons/sprite.svg#search-submit"></use>
+						</svg>
+					</span>
 				</div>
-				<div class="header__bottom-items">
-					<div class="item">
-						<a href="javascript:;" class="basket-link delay">
-							<svg width="20" height="18">
-								<use xlink:href="img/icons/sprite.svg#basket-delay"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="item">
-						<a href="javascript:;" class="basket-link compare">
-							<svg width="14" height="16">
-								<use xlink:href="img/icons/sprite.svg#basket-compare"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="item">
-						<a href="javascript:;" class="cabinet-link">
-							<svg width="18" height="19">
-								<use xlink:href="img/icons/sprite.svg#user"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="item">
-						<a href="javascript:;" class="basket-link basket">
-							<svg width="21" height="17">
-								<use xlink:href="img/icons/sprite.svg#basket"></use>
-							</svg>
-						</a>
-					</div>
+				<div class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
+
 			</div>
 		</div>
 	</div>

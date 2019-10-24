@@ -2,6 +2,79 @@
 @import "partials/settings";
 
 .header {
+
+	// МОБИЛЬНАЯ ШАПКА
+	&__mobile {
+		display: none;
+		background-color: $red;
+	}
+
+	.logo--mobile {
+		border-right: 1px solid $white;
+	}
+
+	&__mobile-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 0 0 17px;
+		width: 100%;
+	}
+
+	.segments-current {
+		display: flex;
+		align-items: center;
+		color: $white;
+		font-size: 14px;
+		line-height: 16px;
+		cursor: pointer;
+
+		p {
+			margin-right: 8px;
+		}
+	}
+
+	.segments-other {
+		display: none;
+	}
+
+	&__mobile-right {
+		display: flex;
+		align-items: center;
+	}
+
+	&__mobile-search {
+		use {
+			stroke: $white;
+		}
+	}
+
+	.burger {
+		padding: 24px;
+		position: relative;
+		span {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			display: block;
+			width: 20px;
+			height: 2px;
+			background-color: $white;
+
+			&:nth-of-type(1) {
+				bottom: 10px;
+			}
+
+			&:nth-last-of-type(1) {
+				top: 10px;
+			}
+		}
+	}
+
+	// ДЭКСТОПНАЯ ШАПКА
 	&__top {
 		background-color: $dark;
 	}
@@ -77,6 +150,7 @@
 	//МЕНЮ И ПОИСК
 	.menu-search-block {
 		display: flex;
+		flex-basis: 85%;
 	}
 
 	&__bottom-menu {
@@ -88,19 +162,22 @@
 		}
 
 		a {
-			padding: 13px 24px;
+			padding: 13px 24px 12px;
 			font-size: 16px;
 			line-height: 19px;
 			display: inline-block;
 			color: $title-gray;
+			white-space: nowrap;
 		}
+	}
 
+	&__bottom-search {
+		width: 100%;
 	}
 
 	.search-form {
 		position: relative;
 		background-color: $header-top-menu-hover;
-		width: 467px;
 	}
 
 	.search-input {
@@ -1007,7 +1084,7 @@
 	margin-bottom: 57px;
 
 	&__search {
-		max-width: 485px;
+		max-width: 33%;
 		position: relative;
 		margin-bottom: 32px;
 	}
