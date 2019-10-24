@@ -297,12 +297,14 @@
 //===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
 
 .product {
+	position: relative;
 	width: 288px;
 	padding-left: 19px;
 	padding-top: 16px;
 	padding-right: 23px;
 	padding-bottom: 24px;
 	background-color: $white;
+	z-index: 1;
 
 	&--big {
 		width: 584px;
@@ -359,6 +361,10 @@
 		position: relative;
 		margin: 0 auto;
 	}
+}
+
+.test-hover {
+
 }
 
 //===============РЕЙТИНГ==============
