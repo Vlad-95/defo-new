@@ -383,7 +383,7 @@
 
 	&__card {
 		margin-right: 7px;
-		margin-bottom: 8px;
+		margin-bottom: 16px;
 
 		&:last-child {
 			margin-right: 0;
@@ -898,7 +898,7 @@
 	}
 }
 
-//===============категории==============
+//===============КАТЕГОРИИ==============
 
 .categories-preview {
 	display: flex;
@@ -980,26 +980,99 @@
 
 	&__item {
 		position: relative;
-		max-width: 165px;
+		width: 280px;
+		border-bottom: none;
+		box-sizing: border-box;
 	}
 
-	&__link {
+	&__name {
+		position: relative;
 		display: block;
-		padding-top: 65px;
+		padding-top: 83px;
+		padding-left: 21px;
+		padding-right: 19px;
 		font-size: 16px;
-		line-height: 24px;
+		font-weight: 400;
+		line-height: 19px;
 		text-align: center;
-		color: $dark;
+		color: $title-gray;
+		border: 1px solid transparent;
+		border-bottom: none;
 
 		&:before {
 			top: 0;
 			left: 50%;
-			content: url("../img/icons/message.svg");
 			position: absolute;
-			width: 40px;
-			height: 40px;
 			transform: translateX(-50%);
 		}
+
+		&--test-drive {
+			&:before {
+				content: url("../img/icons/test-drive.svg");
+			}
+		}
+
+		&--project {
+			&:before {
+				content: url("../img/icons/project.svg");
+			}
+		}
+
+		&--specialist {
+			&:before {
+				content: url("../img/icons/specialist-to-office.svg");
+			}
+		}
+
+		&--expert {
+			&:before {
+				content: url("../img/icons/expert-consultation.svg");
+			}
+		}
+
+		&--documents {
+			&:before {
+				content: url("../img/icons/documents.svg");
+			}
+		}
+	}
+
+	&__item:hover &__name {
+		background-color: $white;
+		border-color: $header-top-menu;
+		box-shadow: 8px 8px 50px $product-shadow;
+	}
+
+	&__text {
+		display: none;
+		position: absolute;
+		left: 0;
+		font-size: 12px;
+		padding-top: 40px;
+		padding-bottom: 58px;
+		padding-left: 21px;
+		padding-right: 19px;
+		line-height: 16px;
+		color: $title-gray;
+		background-color: $white;
+		z-index: 2;
+		border: 1px solid $header-top-menu;
+		border-top: none;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 20px;
+			left: 50%;
+			width: 32px;
+			height: 4px;
+			background-color: $red;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__item:hover &__text {
+		display: block;
 	}
 }
 
@@ -1361,6 +1434,7 @@
 
 	&__main {
 		display: flex;
+		flex-wrap: wrap;
 		padding-top: 40px;
 		padding-bottom: 50px;
 	}
@@ -1383,13 +1457,13 @@
 		font-weight: 400;
 		line-height: 29px;
 		color: $title-gray-light;
-	}
 
-	&__title {
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
-		color: $title-gray;
+		&--title {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 20px;
+			color: $title-gray;
+		}
 	}
 
 	&__list-special {

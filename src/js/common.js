@@ -56,6 +56,49 @@ $(document).ready(function () {
 
 	});
 
+	//слайдер-партнеры
+	$('.partners__list').slick({
+		mobileFirst: true,
+		arrows: false,
+		dots: false,
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		responsive: [
+			{
+				breakpoint: 320,
+				settings: {
+					slidesToShow: 2,
+					centerPadding: '60px',
+					centerMode: true
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: 5
+				}
+			},
+			{
+				breakpoint: 1280,
+				settings: 'unslick'
+			}
+		]
+
+	});
+
 	//одинаковая высота новостей
 	$('.news__text').matchHeight();
 
