@@ -19,9 +19,15 @@ $(document).ready(function () {
 		dropdownMenu.height(productMenuHeight);
 	})();
 
+	var WINDOW_WIDTH = {
+		mobileBreakpoint: 576,
+		tablet: 768,
+		laptop: 1280
+	};
+
 
 	$(window).resize(function () {
-		if(document.documentElement.clientWidth >= 1280) {
+		if(document.documentElement.clientWidth >= WINDOW_WIDTH.laptop) {
 			var introContentWidth = $('.intro__content').width();
 			var introContentLeft = $('.intro__content').offset().left;
 			var productMenuWidth = $('.product-menu').width();
@@ -34,7 +40,6 @@ $(document).ready(function () {
 			dropdownMenu.width(introContentWidth - productMenuWidth - productMenuLeftWidth);
 			dropdownMenu.height(productMenuHeight);
 		}
-
 	});
 
 	// слайдер кнопок под первым экраном
@@ -124,16 +129,26 @@ $(document).ready(function () {
 	$('.news__text').matchHeight();
 
 	//аккордеон
-	$('.map__item .item-name').click(function () {
-		$('.map__item .item-name').not(this).next().slideUp();
-		$(this).next().slideToggle();
-	});
+	var activateAccordion = function (element) {
+		element.click(function () {
+			element.not(this).next().slideUp();
+			$(this).next().slideToggle();
+		});
+	};
+
+	//аккордеон карта
+	var mapToggle = $('.map__item .item-name');
+
+	activateAccordion(mapToggle);
+
 
 	//аккордеон футер
-	$('.footer__title').click(function () {
-		$('.footer__title').not(this).next().slideUp();
-		$(this).next().slideToggle();
-	});  
+	if(document.documentElement.clientWidth <= WINDOW_WIDTH.mobileBreakpoint) {
+		var footerToggle = $('.footer__title');
+
+		activateAccordion(footerToggle);
+	}
+
 
 	// Дождёмся загрузки API и готовности DOM.
 	ymaps.ready(init);
