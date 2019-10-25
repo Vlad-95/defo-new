@@ -6,14 +6,35 @@ $(document).ready(function () {
 
 
 	//ширина раскрывающегося меню
-	var dropdown = $('.dropdown-menu');
-	var menuWidth = $('.product-menu').innerWidth;
+	(function () {
+		var introContentWidth = $('.intro__content').width();
+		var introContentLeft = $('.intro__content').offset().left;
+		var productMenuWidth = $('.product-menu').width();
+		var productMenuHeight = $('.product-menu').height();
+		var productMenuLeft = $('.product-menu').offset().left;
+		var productMenuLeftWidth = productMenuLeft - introContentLeft;
+		var dropdownMenu = $('.dropdown-menu');
+
+		dropdownMenu.width(introContentWidth - productMenuWidth - productMenuLeftWidth);
+		dropdownMenu.height(productMenuHeight);
+	})();
+
+
 	$(window).resize(function () {
-		var dropdownWidth = window.innerWidth - menuWidth - 15;
-		dropdown.css('width', function () {
-			return (window.innerWidth - menuWidth - 15);
-		});
-		console.log(window.innerWidth);
+		if(document.documentElement.clientWidth >= 1280) {
+			var introContentWidth = $('.intro__content').width();
+			var introContentLeft = $('.intro__content').offset().left;
+			var productMenuWidth = $('.product-menu').width();
+			var productMenuHeight = $('.product-menu').height();
+			var productMenuLeft = $('.product-menu').offset().left;
+			var productMenuLeftWidth = productMenuLeft - introContentLeft;
+			var dropdownMenu = $('.dropdown-menu');
+
+
+			dropdownMenu.width(introContentWidth - productMenuWidth - productMenuLeftWidth);
+			dropdownMenu.height(productMenuHeight);
+		}
+
 	});
 
 	// слайдер кнопок под первым экраном
