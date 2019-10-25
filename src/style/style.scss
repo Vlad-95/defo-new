@@ -117,7 +117,8 @@
 				background-color: transparent;
 				display: inline-block;
 
-				&:hover {
+				&:hover,
+				&.active {
 					background-color: $title-gray;
 					color: $header-top-menu-hover;
 				}
@@ -136,6 +137,11 @@
 		.city-choose {
 			margin-right: 40px;
 			display: flex;
+
+			span {
+				text-transform: uppercase;
+				margin-right: 8px;
+			}
 		}
 	}
 
@@ -231,8 +237,8 @@
 		use {
 			stroke: $white;
 		}
-
 	}
+
 	//ИКОНКИ КОРЗИНЫ И ЛК
 	&__bottom-items {
 		display: flex;
@@ -275,17 +281,49 @@
 		font-size: 16px;
 		line-height: 19px;
 		color: $title-gray;
-		background-color: $main-bg;
 		display: inline-block;
 
 		ul {
 			padding: 0;
 			margin: 0;
 			list-style-type: none;
+			position: relative;
 		}
 
 		li {
 			border-bottom: 1px solid $header-search-dark-gray;
+			background-color: $main-bg;
+			transition: 0.3s;
+
+			&:nth-last-of-type(1) {
+				border: none;
+			}
+
+			&:hover {
+				background-color: $header-top-menu-hover;
+			}
+
+			.dropdown-menu {
+				display: none;
+				position: absolute;
+				left: 100%;
+				top: 0;
+				width: 500px;
+				background-color: $main-bg;
+
+				li {
+					border: none;
+				}
+			}
+
+			&:hover .dropdown-menu {
+				display: block;
+			}
+		}
+
+		.product-menu__item {
+			padding: 15px 24px;
+			display: block;
 			position: relative;
 
 			&:after {
@@ -303,35 +341,6 @@
 				background-repeat: no-repeat;
 
 			}
-
-			&:nth-last-of-type(1) {
-				border: none;
-			}
-
-			.dropdown-menu {
-				display: none;
-				position: absolute;
-				left: 100%;
-				top: 0;
-				width: 500px;
-				background-color: $main-bg;
-
-				li {
-					border: none;
-					&:after {
-						display: none;
-					}
-				}
-			}
-
-			&:hover .dropdown-menu {
-				display: block;
-			}
-		}
-
-		a {
-			padding: 15px 24px;
-			display: block;
 		}
 
 	}
@@ -1412,6 +1421,14 @@
 		font-size: 12px;
 		line-height: 18px;
 		color: $news-date;
+	}
+
+	&__rating {
+		margin-bottom: 16px;
+
+		.rating {
+			margin: 0;
+		}
 	}
 
 	&__text {
