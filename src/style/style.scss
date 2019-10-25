@@ -1439,23 +1439,39 @@
 		padding-bottom: 50px;
 	}
 
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+
+		&--column {
+			flex-direction: column;
+
+			&:last-child .footer__list-wrapper {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__list-wrapper {
+		margin-right: 80px;
+		width: 220px;
+	}
+
 	&__list {
 		margin: 0;
-		margin-right: 80px;
 		padding: 0;
-		width: 220px;
 		list-style: none;
-
-		&:last-child {
-			margin-right: 0;
-		}
 	}
 
 	&__link {
 		display: block;
+		padding-top: 8px;
+		padding-right: 5px;
+		padding-bottom: 8px;
+		padding-left: 5px;
 		font-size: 12px;
 		font-weight: 400;
-		line-height: 29px;
+		line-height: 14px;
 		color: $title-gray-light;
 
 		&--title {
@@ -1468,7 +1484,7 @@
 
 	&__list-special {
 		margin-top: 30px;
-		margin-bottom: 35px;
+		width: 220px;
 	}
 
 	.footer__legal {
