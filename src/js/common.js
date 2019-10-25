@@ -129,6 +129,12 @@ $(document).ready(function () {
 		$(this).next().slideToggle();
 	});
 
+	//аккордеон футер
+	$('.footer__title').click(function () {
+		$('.footer__title').not(this).next().slideUp();
+		$(this).next().slideToggle();
+	});  
+
 	// Дождёмся загрузки API и готовности DOM.
 	ymaps.ready(init);
 

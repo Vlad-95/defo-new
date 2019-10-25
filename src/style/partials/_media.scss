@@ -455,7 +455,7 @@
 
 @media(max-width: 1280px){
 	.footer {
-		&__list {
+		&__list-wrapper {
 			width: 210px;
 			margin-right: 40px;
 		}
@@ -554,9 +554,24 @@
 			padding-bottom: 10px;
 		}
 
-		&__list {
-			width: 200px;
+		&__wrapper {
+			&--column {
+				&:last-child .footer__list-wrapper {
+					width: 220px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__list-wrapper {
+			width: 165px;
+			margin-right: 20px;
 			margin-bottom: 40px;
+
+			&:last-child {
+				margin-bottom: 0;
+				margin-right: 0;
+			}
 		}
 	}
 }
@@ -601,7 +616,7 @@
 
 //===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
 
-@media(max-width: 320px) {
+@media(max-width: 576px) {
 	.products {
 
 		&__list {
@@ -622,7 +637,7 @@
 
 //===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
 
-@media(max-width: 320px) {
+@media(max-width: 576px) {
 	.product {
 		order: 1;
 		width: 100%;
@@ -644,7 +659,7 @@
 
 //===============СКИДКИ==============
 
-@media(max-width: 320px) {
+@media(max-width: 576px) {
 	.sales {
 		margin-bottom: 50px;
 
@@ -656,7 +671,7 @@
 
 //===============КАТЕГОРИИ==============
 
-@media(max-width: 320px) {
+@media(max-width: 576px) {
 	.categories-preview {
 		&__wrapper {
 			margin-right: 0;
@@ -670,7 +685,7 @@
 
 //===============УСЛУГИ==============
 
-@media(max-width: 320px) {
+@media(max-width: 576px) {
 	.services {
 		margin-bottom: 30px;
 
@@ -696,31 +711,47 @@
 
 //===============ФУТЕР==============
 
-@media(max-width: 320px) {
+@media(max-width: 576px) {
 	.footer {
 		margin-top: 50px;
 
-		&__list {
+		&__list-wrapper {
 			position: relative;
 			margin: 0 auto;
 			margin-bottom: 24px;
+			width: 220px;
 
 			&:last-child {
 				margin-right: auto;
+				margin-bottom: 24px;
 			}
+		}
+
+		&__wrapper {
+			&--column {
+				width: 100%;
+
+				&:last-child .footer__list-wrapper {
+					margin: 0 auto;
+				}
+			}
+		}
+
+		&__list-special {
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+
+		&__list {
+			display: none;
 
 			&__special {
 				margin-top: 40px;
 			}
 		}
 
-		&__list-toggle {
-			position: relative;
-			background-color: $main-bg;
-		}
-
 		&__item {
-			position: absolute;
+			//position: absolute;
 			top: 0;
 			z-index: -1;
 		}
