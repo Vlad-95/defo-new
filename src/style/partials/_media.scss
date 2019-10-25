@@ -368,6 +368,16 @@
 
 //===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
 
+@media(max-width: 1500px) {
+	.product {
+		width: 285px;
+
+		&--big {
+			width: 495px;
+		}
+	}
+}
+
 @media(max-width: 1280px) {
 	.product {
 		width: 240px;
@@ -404,6 +414,36 @@
 	}
 }
 
+@media(max-width: 768px) {
+	.product {
+		order: 1;
+		&--big {
+			order: 2;
+			width: 100%;
+		}
+	}
+}
+
+@media(max-width: 576px) {
+	.product {
+		order: 1;
+		width: 100%;
+		height: auto;
+
+		&--big {
+			order: 1;
+
+			.product__image {
+				min-height: auto;
+			}
+		}
+
+		&__main-image {
+			min-height: auto;
+		}
+	}
+}
+
 //===============ЦЕНЫ==============
 
 @media(max-width: 1280px) {
@@ -429,6 +469,32 @@
 
 //===============КАТЕГОРИИ==============
 
+@media(max-width: 1500px) {
+	.categories-preview {
+
+		&__wrapper {
+			width: 360px;
+
+			&--big {
+				//width: 729px;
+				width: 66%;
+			}
+		}
+	}
+}
+
+@media(max-width: 1494px) {
+	.categories-preview {
+
+		&__wrapper {
+
+			&--big {
+				//width: 728px;
+			}
+		}
+	}
+}
+
 @media(max-width: 1280px) {
 	.categories-preview {
 
@@ -450,52 +516,6 @@
 		}
 	}
 }
-
-//===============ФУТЕР==============
-
-@media(max-width: 1280px){
-	.footer {
-		&__list-wrapper {
-			width: 210px;
-			margin-right: 40px;
-		}
-	}
-}
-
-//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
-
-@media(max-width: 768px) {
-	.products {
-
-		&__list {
-			justify-content: flex-start;
-		}
-
-		&__card {
-			margin-right: 7px;
-			margin-bottom: 25px;
-
-			&:last-child,
-			&:nth-child(3n){
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
-
-@media(max-width: 768px) {
-	.product {
-		order: 1;
-		&--big {
-			order: 2;
-			width: 100%;
-		}
-	}
-}
-
-//===============КАТЕГОРИИ==============
 
 @media(max-width: 768px) {
 	.categories-preview {
@@ -532,19 +552,28 @@
 	}
 }
 
-//===============УСЛУГИ==============
+@media(max-width: 576px) {
+	.categories-preview {
+		&__wrapper {
+			margin-right: 0;
 
-@media(max-width: 768px) {
-	.services {
-		margin-bottom: 60px;
-
-		&__list {
-			flex-wrap: wrap;
+			&:nth-child(2) {
+				margin-right: 0;
+			}
 		}
 	}
 }
 
 //===============ФУТЕР==============
+
+@media(max-width: 1280px){
+	.footer {
+		&__list-wrapper {
+			width: 210px;
+			margin-right: 40px;
+		}
+	}
+}
 
 @media(max-width: 768px){
 	.footer {
@@ -575,141 +604,6 @@
 		}
 	}
 }
-
-//===============СКИДКИ==============
-
-@media(max-width: 768px){
-	.sales {
-		flex-wrap: wrap;
-		justify-content: center;
-
-		&__banner {
-			width: 360px;
-			margin-right: 15px;
-			margin-bottom: 15px;
-
-			&:nth-child(2n) {
-				margin-right: 0;
-			}
-		}
-
-		&__title {
-			left: 15px;
-			bottom: 15px;
-			font-size: 25px;
-			line-height: 28px;
-		}
-
-		&__percent {
-			font-size: 18px;
-		}
-	}
-}
-
-//===============ПАРТНЕРЫ==============
-
-@media(max-width: 768px){
-	.partners {
-		margin-bottom: 25px;
-	}
-}
-
-//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
-
-@media(max-width: 576px) {
-	.products {
-
-		&__list {
-			justify-content: flex-start;
-		}
-
-		&__card {
-			margin-right: 0;
-			margin-bottom: 25px;
-
-			&:last-child,
-			&:nth-child(3n){
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
-
-@media(max-width: 576px) {
-	.product {
-		order: 1;
-		width: 100%;
-		height: auto;
-
-		&--big {
-			order: 1;
-
-			.product__image {
-				min-height: auto;
-			}
-		}
-
-		&__main-image {
-			min-height: auto;
-		}
-	}
-}
-
-//===============СКИДКИ==============
-
-@media(max-width: 576px) {
-	.sales {
-		margin-bottom: 50px;
-
-		&__banner {
-			margin-right: 0;
-		}
-	}
-}
-
-//===============КАТЕГОРИИ==============
-
-@media(max-width: 576px) {
-	.categories-preview {
-		&__wrapper {
-			margin-right: 0;
-
-			&:nth-child(2) {
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-//===============УСЛУГИ==============
-
-@media(max-width: 576px) {
-	.services {
-		margin-bottom: 30px;
-
-		&__item {
-			margin-bottom: 20px;
-		}
-
-		&__name {
-			padding-top: 0;
-			padding-left: 95px;
-			padding-right: 0;
-			font-size: 14px;
-			text-align: left;
-
-			&:before {
-				top: 50%;
-				left: 0;
-				transform: translate(0, -50%);
-			}
-		}
-	}
-}
-
-//===============ФУТЕР==============
 
 @media(max-width: 576px) {
 	.footer {
@@ -786,5 +680,129 @@
 				}
 			}
 		}
+	}
+}
+
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
+
+@media(max-width: 768px) {
+	.products {
+
+		&__list {
+			justify-content: flex-start;
+		}
+
+		&__card {
+			margin-right: 7px;
+			margin-bottom: 25px;
+
+			&:last-child,
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media(max-width: 576px) {
+	.products {
+
+		&__list {
+			justify-content: flex-start;
+		}
+
+		&__card {
+			margin-right: 0;
+			margin-bottom: 25px;
+
+			&:last-child,
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+//===============УСЛУГИ==============
+
+@media(max-width: 768px) {
+	.services {
+		margin-bottom: 60px;
+
+		&__list {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media(max-width: 576px) {
+	.services {
+		margin-bottom: 30px;
+
+		&__item {
+			margin-bottom: 20px;
+		}
+
+		&__name {
+			padding-top: 0;
+			padding-left: 95px;
+			padding-right: 0;
+			font-size: 14px;
+			text-align: left;
+
+			&:before {
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+			}
+		}
+	}
+}
+
+//===============СКИДКИ==============
+
+@media(max-width: 768px){
+	.sales {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&__banner {
+			width: 360px;
+			margin-right: 15px;
+			margin-bottom: 15px;
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+
+		&__title {
+			left: 15px;
+			bottom: 15px;
+			font-size: 25px;
+			line-height: 28px;
+		}
+
+		&__percent {
+			font-size: 18px;
+		}
+	}
+}
+
+@media(max-width: 576px) {
+	.sales {
+		margin-bottom: 50px;
+
+		&__banner {
+			margin-right: 0;
+		}
+	}
+}
+
+//===============ПАРТНЕРЫ==============
+
+@media(max-width: 768px){
+	.partners {
+		margin-bottom: 25px;
 	}
 }
