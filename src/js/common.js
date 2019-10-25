@@ -20,7 +20,7 @@ $(document).ready(function () {
 	})();
 
 	var WINDOW_WIDTH = {
-		mobileBreakpoint: 576,
+		mobileBreakpoint: 725,
 		tablet: 768,
 		laptop: 1280
 	};
@@ -112,7 +112,7 @@ $(document).ready(function () {
 				}
 			},
 			{
-				breakpoint: 1279,
+				breakpoint: 975,
 				settings: {
 					slidesToShow: 5
 				}
@@ -123,6 +123,37 @@ $(document).ready(function () {
 			}
 		]
 
+	});
+
+	//продукты
+	$('.products__list').slick({
+		mobileFirst: true,
+		centerMode: true,
+		centerPadding: '60px',
+		responsive: [
+				{
+					breakpoint: 320,
+					settings: {
+						slidesToShow: 1
+					}
+				},
+				{
+					breakpoint: 700,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 1000,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 1280,
+					settings: "unslick"
+				}
+			]
 	});
 
 	//одинаковая высота новостей
