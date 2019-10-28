@@ -171,12 +171,12 @@ $(document).ready(function () {
 						slidesToShow: 3
 					}
 				},
-				{
-					breakpoint: 1150,
-					settings: {
-						slidesToShow: 4
-					}
-				},
+				// {
+				// 	breakpoint: 1150,
+				// 	settings: {
+				// 		slidesToShow: 4
+				// 	}
+				// },
 				// {
 				// 	breakpoint: 1500,
 				// 	settings: {
@@ -185,7 +185,7 @@ $(document).ready(function () {
 				// 	}
 				// },
 				{
-					breakpoint: 1500,
+					breakpoint: 1200,
 					settings: 'unslick'
 				}
 			]
