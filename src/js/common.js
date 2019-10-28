@@ -127,31 +127,61 @@ $(document).ready(function () {
 
 	//продукты
 	$('.products__list').slick({
+		arrows: false,
+		dots: false,
 		mobileFirst: true,
 		centerMode: true,
-		centerPadding: '60px',
 		responsive: [
 				{
 					breakpoint: 320,
 					settings: {
-						slidesToShow: 1
+						slidesToShow: 1,
+						centerPadding: '15px'
 					}
 				},
 				{
-					breakpoint: 700,
+					breakpoint: 400,
 					settings: {
-						slidesToShow: 2
+						slidesToShow: 1,
+						centerPadding: '20px'
 					}
 				},
 				{
-					breakpoint: 1000,
+					breakpoint: 500,
+					settings: {
+						slidesToShow: 2,
+						centerPadding: '10px'
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						centerPadding: '20px'
+					}
+				},
+				{
+					breakpoint: 900,
 					settings: {
 						slidesToShow: 3
 					}
 				},
 				{
-					breakpoint: 1280,
-					settings: "unslick"
+					breakpoint: 1150,
+					settings: {
+						slidesToShow: 4
+					}
+				},
+				// {
+				// 	breakpoint: 1500,
+				// 	settings: {
+				// 		slidesToShow: 4,
+				// 		centerMode: false
+				// 	}
+				// },
+				{
+					breakpoint: 1500,
+					settings: 'unslick'
 				}
 			]
 	});

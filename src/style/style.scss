@@ -399,6 +399,10 @@
 		}
 	}
 
+	.slick-list {
+		overflow-y: visible;
+	}
+
 	.slick-slide {
 		margin: 0 5px;
 	}
@@ -413,6 +417,7 @@
 	z-index: 1;
 
 	&__main-wrap {
+		display: block;
 		padding-left: 19px;
 		padding-top: 16px;
 		padding-right: 23px;
@@ -428,16 +433,11 @@
 	}
 
 	&:hover &__main-wrap {
-		//position: absolute;
+		position: absolute;
 		border: 1px solid $header-top-menu;
 		box-shadow: 8px 8px 50px $product-shadow;
 		z-index: 2;
 		//transform: scale(1.5);
-	}
-
-	&__main-wrap {
-		display: block;
-		z-index: 1;
 	}
 
 	&__main-image {
@@ -790,7 +790,7 @@
 .recommend {
 	position: relative;
 	padding-left: 16px;
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 14px;
 	color: $header-top-menu;
 
