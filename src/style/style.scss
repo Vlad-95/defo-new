@@ -398,6 +398,10 @@
 			margin-right: 0;
 		}
 	}
+
+	.slick-slide {
+		margin: 0 5px;
+	}
 }
 
 //===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА САМА ПО СЕБЕ==============
@@ -425,7 +429,7 @@
 
 	&:hover &__main-wrap {
 		//position: absolute;
-		border: 1px solid $title-gray;
+		border: 1px solid $header-top-menu;
 		box-shadow: 8px 8px 50px $product-shadow;
 		z-index: 2;
 		//transform: scale(1.5);
@@ -911,7 +915,7 @@
 
 .categories-preview {
 	display: flex;
-	margin-bottom: 100px;
+	margin-bottom: 80px;
 
 	&__column {
 		display: flex;
@@ -928,6 +932,7 @@
 		position: relative;
 		display: flex;
 		width: 361px;
+		padding: 20px;
 		min-height: 240px;
 		margin-right: 8px;
 		margin-bottom: 8px;
@@ -997,7 +1002,7 @@
 	&__name {
 		position: relative;
 		display: block;
-		padding-top: 83px;
+		padding-top: 90px;
 		padding-left: 21px;
 		padding-right: 19px;
 		font-size: 16px;
@@ -1103,7 +1108,13 @@
 
 	&__banner {
 		position: relative;
+		margin-right: 15px;
 		width: 720px;
+		box-sizing: border-box;
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 
 	&__title {
