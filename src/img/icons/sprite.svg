@@ -20,7 +20,7 @@
 		<path d="M9.5 1.5L5.5 5.5L1.5 1.5" stroke="#545863" fill="none" stroke-width="2"/>
 	</symbol>
 	<symbol viewBox="0 0 10 6" id="city-choose-arrow">
-		<path d="M9 0.999994L5 4.99999L1 0.999994" stroke="#E5E5E6"/>
+		<path d="M9 0.999994L5 4.99999L1 0.999994" fill="none" stroke="#E5E5E6"/>
 	</symbol>
 	<symbol viewBox="0 0 24 25" fill="none" id="search-submit">
 		<path d="M9 17.8649C13.4183 17.8649 17 14.2269 17 9.73911C17 5.25135 13.4183 1.61331 9 1.61331C4.58172 1.61331 1 5.25135 1 9.73911C1 14.2269 4.58172 17.8649 9 17.8649Z" stroke-width="2" stroke-miterlimit="10"/>
