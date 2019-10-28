@@ -5,6 +5,11 @@ $(document).ready(function () {
 	});
 
 
+	//затемнение контента при раскрытии меню
+	$('.product-menu .product-menu__item').hover(function () {
+		$('.overlay').toggleClass('active');
+	});
+
 	//ширина раскрывающегося меню
 	(function () {
 		var introContentWidth = $('.intro__content').width();
