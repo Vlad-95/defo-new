@@ -30,7 +30,7 @@ var path = {
 		html: 'src/*.html',
 		php: 'src/*.php',
 		js: 'src/js/*.js',
-		style: 'src/style/*.scss',
+		style: 'src/style/**/*.scss',
 		img: 'src/img/**/*',
 		fonts: 'src/fonts/**/*',
 		bower: 'src/bower/**/*'
@@ -39,7 +39,7 @@ var path = {
 		html: 'src/**/*.html',
 		php: 'src/*.php',
 		js: 'src/js/**/*.js',
-		style: 'src/style/**/*.scss',
+		style: 'src/style/*.scss',
 		img: 'src/img/**/*',
 		fonts: 'src/fonts/**/*',
 		bower: 'src/bower/**/*'

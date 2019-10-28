@@ -2,7 +2,8 @@
 @import "partials/settings";
 
 .header {
-
+	position: relative;
+	z-index: 3;
 	// МОБИЛЬНАЯ ШАПКА
 	&__mobile {
 		display: none;
@@ -150,7 +151,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-left: 378px;
+		padding-left: 347px;
 	}
 
 	//МЕНЮ И ПОИСК
@@ -214,6 +215,10 @@
 				text-transform: uppercase;
 				color: $title-gray;
 			}
+
+			.arrow {
+
+			}
 		}
 
 		.filter-dropdown {
@@ -273,15 +278,17 @@
 
 	.product-menu {
 		position: absolute;
+		z-index: 3;
 		left: 0;
 		right: 1548px;
 		top: 0;
 		margin: auto;
 		width: 307px;
 		font-size: 16px;
-		line-height: 19px;
+		line-height: 20px;
 		color: $title-gray;
 		display: inline-block;
+		border: 1px solid $header-search-dark-gray;
 
 		ul {
 			padding: 0;
@@ -290,7 +297,7 @@
 			position: relative;
 		}
 
-		li {
+		.product-menu__item {
 			border-bottom: 1px solid $header-search-dark-gray;
 			background-color: $main-bg;
 			transition: 0.3s;
@@ -306,10 +313,12 @@
 			.dropdown-menu {
 				display: none;
 				position: absolute;
-				left: 100%;
-				top: 0;
+				left: calc(100% + 1px);
+				top: -1px;
 				width: 500px;
 				background-color: $main-bg;
+				border: 1px solid $header-search-dark-gray;
+				border-left: none;
 
 				li {
 					border: none;
@@ -321,8 +330,8 @@
 			}
 		}
 
-		.product-menu__item {
-			padding: 15px 24px;
+		.product-menu__item_link {
+			padding: 14px 24px;
 			display: block;
 			position: relative;
 
@@ -339,15 +348,28 @@
 				background-size: contain;
 				background-position: center center;
 				background-repeat: no-repeat;
-
 			}
 		}
+	}
+}
 
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: $opacity-gray;
+	z-index: 2;
+	display: none;
+
+	&.active {
+		display: block;
 	}
 }
 //===========Кнопки под первым блоком=============
 .product-kind-btns {
-	padding: 32px 0 18px;
+	padding: 29px 0 15px;
 	&__wrapper {
 		display: flex;
 		justify-content: center;
@@ -360,7 +382,7 @@
 		line-height: 19px;
 		color: $dark;
 		border: 1px solid $header-top-menu-hover;
-		padding: 11px 24px;
+		padding: 10px 24px;
 		margin: 2px;
 	}
 }
@@ -1351,7 +1373,7 @@
 	}
 
 	&__content {
-		padding: 12px 20px;
+		padding: 12px 20px 30px;
 	}
 
 	&__date {
@@ -1404,7 +1426,7 @@
 	}
 
 	&__item {
-		flex-basis: 50%;
+		flex-basis: 49%;
 		padding-right: 140px;
 	}
 
